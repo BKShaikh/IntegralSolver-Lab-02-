@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="656.0" prefWidth="613.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication2.FXMLDocumentController">
+   <children>
+      <TextField fx:id="cost" layoutX="207.0" layoutY="14.0" snapToPixel="false">
+         <padding>
+            <Insets bottom="5.0" right="10.0" top="10.0" />
+         </padding></TextField>
+      <TextField fx:id="sell" layoutX="207.0" layoutY="54.0" snapToPixel="false">
+         <padding>
+            <Insets bottom="5.0" right="10.0" top="10.0" />
+         </padding></TextField>
+      <TextField fx:id="origin" layoutX="207.0" layoutY="95.0" snapToPixel="false">
+         <padding>
+            <Insets bottom="5.0" right="10.0" top="10.0" />
+         </padding></TextField>
+      <TextField fx:id="bound" layoutX="207.0" layoutY="135.0" snapToPixel="false">
+         <padding>
+            <Insets bottom="5.0" right="10.0" top="10.0" />
+         </padding></TextField>
+      <TextField fx:id="discount" layoutX="207.0" layoutY="180.0" snapToPixel="false">
+         <padding>
+            <Insets bottom="5.0" right="10.0" top="10.0" />
+         </padding></TextField>
+      <TextField fx:id="stream" layoutX="207.0" layoutY="221.0" snapToPixel="false">
+         <padding>
+            <Insets bottom="5.0" right="10.0" top="10.0" />
+         </padding></TextField>
+      <TextField fx:id="quantity" layoutX="207.0" layoutY="269.0" snapToPixel="false">
+         <padding>
+            <Insets bottom="5.0" right="10.0" top="10.0" />
+         </padding></TextField>
+      <ChoiceBox fx:id="demand" layoutX="205.0" layoutY="318.0" prefWidth="150.0" snapToPixel="false" />
+      <Button fx:id="simulate" layoutX="392.0" layoutY="398.0" mnemonicParsing="false" onAction="#handleButtonAction" text="SIMULATE" />
+      <Label layoutX="32.0" layoutY="322.0" snapToPixel="false" text="DEMAND" />
+      <Label layoutX="33.0" layoutY="269.0" snapToPixel="false" text="QUANTITY">
+         <padding>
+            <Insets bottom="5.0" right="10.0" top="10.0" />
+         </padding></Label>
+      <Label layoutX="4.0" layoutY="135.0" snapToPixel="false" text="RANDOM NUMBER BOUND">
+         <padding>
+            <Insets bottom="5.0" right="10.0" top="10.0" />
+         </padding></Label>
+      <Label layoutX="5.0" layoutY="95.0" prefHeight="32.0" prefWidth="176.0" snapToPixel="false" text="RANDOM NUMBER ORIGIN">
+         <padding>
+            <Insets bottom="5.0" right="10.0" top="10.0" />
+         </padding></Label>
+      <Label layoutX="26.0" layoutY="221.0" snapToPixel="false" text="STREAM SIZE">
+         <padding>
+            <Insets bottom="5.0" right="10.0" top="10.0" />
+         </padding></Label>
+      <Label layoutX="32.0" layoutY="180.0" snapToPixel="false" text="DISCOUNT">
+         <padding>
+            <Insets bottom="5.0" right="10.0" top="10.0" />
+         </padding></Label>
+      <Label layoutX="12.0" layoutY="54.0" snapToPixel="false" text="SELLING PRICE PER UNIT">
+         <padding>
+            <Insets bottom="5.0" right="10.0" top="10.0" />
+         </padding></Label>
+      <Label layoutX="14.0" layoutY="14.0" snapToPixel="false" text="COST PRICE  PER UNIT">
+         <padding>
+            <Insets bottom="5.0" right="10.0" top="10.0" />
+         </padding></Label>
+      <TableView fx:id="tableForReading" layoutX="45.0" layoutY="366.0" prefHeight="113.0" prefWidth="324.0" AnchorPane.bottomAnchor="199.0">
+         <columns>
+            <TableColumn fx:id="Profit" prefWidth="144.0" text="PROFIT" />
+            <TableColumn fx:id="Probabilty" prefWidth="175.0" text="PROBABILITY" />
+         </columns>
+      </TableView>
+      <BarChart fx:id="BarChart" layoutX="2.0" layoutY="479.0" prefHeight="199.0" prefWidth="611.0" title="Chart">
+         <xAxis>
+            <CategoryAxis label="Profit" side="BOTTOM" fx:id="xAxis" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="yAxis" label="Count" prefHeight="115.0" prefWidth="49.0" side="LEFT" tickLabelRotation="5.2" />
+         </yAxis>
+      </BarChart>
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>
